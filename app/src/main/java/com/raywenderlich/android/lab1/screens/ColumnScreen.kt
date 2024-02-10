@@ -30,7 +30,7 @@ fun MyColumn(){
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier= Modifier.fillMaxSize()){
 
-        THREE_ELEMENT_LIST(listOf(R.string.text1, R.string.text2, R.string.text3)) { textResId ->
+        THREE_ELEMENT_LIST.forEach { textResId ->
             Text(
                 text = stringResource(id = textResId),
                 fontSize = 22.sp

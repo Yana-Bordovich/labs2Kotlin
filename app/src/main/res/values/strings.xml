@@ -24,4 +24,5 @@
     <string name="menu">Menu</string>
     <string name="row">Строка</string>
     <string name="column">Колонка</string>
+    <string name="compApp" />
 </resources>

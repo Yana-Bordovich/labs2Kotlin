@@ -34,17 +34,17 @@ fun ScaffoldScreen() {
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MyScaffold(){
+fun MyScaffold() {
     val scaffoldState: ScaffoldState = rememberScaffoldState()
     val scope: CoroutineScope = rememberCoroutineScope()
 
-    Scaffold(
+    Scaffold (
         scaffoldState = scaffoldState,
         contentColor = colorResource(id = R.color.colorPrimary),
         content = {
             MyRow()
         },
-        topBar = { MyTopAppBar(scaffoldState = scaffoldState, scope = scope) },
+        topBar = { MyTopAppBar(scaffoldState = scaffoldState, scope = scope)},
         bottomBar = { MyBottomAppBar()},
         drawerContent = { MyColumn()}
     )
@@ -53,6 +53,7 @@ fun MyScaffold(){
 @Composable
 fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
     val drawerState = scaffoldState.drawerState
+
     TopAppBar(
         navigationIcon = {
             IconButton(
@@ -65,17 +66,16 @@ fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
                 },
                 onClick = {
                     scope.launch { if (drawerState.isClosed) drawerState.open() else drawerState.close() }
-                }
-            )
+                })
         },
-        title = { Text(text = stringResource(id = R.string.app_name), color = Color.White) },
+        title = {Text(text = stringResource(id = R.string.compApp), color = Color.White)},
         backgroundColor = colorResource(id = R.color.colorPrimary)
     )
 }
 
 @Composable
-fun MyBottomAppBar(){
-    BottomAppBar(
+fun MyBottomAppBar() {
+    BottomAppBar (
         content = {},
         backgroundColor = colorResource(id = R.color.colorPrimary)
     )
