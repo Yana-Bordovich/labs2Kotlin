@@ -17,8 +17,8 @@ import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
 
 @Composable
-fun SurfaceScreen(modifier: Modifier = Modifier){
-    Box(modifier = modifier.fillMaxSize()) {
+fun SurfaceScreen(modifier: Modifier = Modifier) {
+    Box(modifier = modifier.fillMaxSize()){
         MySurface(modifier = modifier.align(Alignment.Center))
     }
 
@@ -28,16 +28,14 @@ fun SurfaceScreen(modifier: Modifier = Modifier){
 }
 
 @Composable
-fun MySurface(modifier: Modifier){
-    Surface (
+fun MySurface(modifier: Modifier) {
+    Surface(
         modifier = modifier.size(100.dp),
         color = Color.LightGray,
         contentColor = colorResource(id = R.color.colorPrimary),
         elevation = 1.dp,
         border = BorderStroke(1.dp, Color.Black)
-    ) {
+    ){
         MyColumn()
     }
 }
-
-
