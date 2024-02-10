@@ -44,3 +44,12 @@ fun MyRow(){
     }
 }
 
+@Composable
+fun MyRow(content: @Composable RowScope.() -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier.fillMaxSize(),
+        content = content
+    )
+}
