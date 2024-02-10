@@ -18,8 +18,10 @@
     <string name="text_center" />
     <string name="text_bottom_end" />
     <string name="text_top_start" />
-    <string name="text1" />
-    <string name="text2" />
-    <string name="text3" />
-
+    <string name="text1">первый</string>
+    <string name="text2">второй</string>
+    <string name="text3">третий</string>
+    <string name="menu">Menu</string>
+    <string name="row">Строка</string>
+    <string name="column">Колонка</string>
 </resources>

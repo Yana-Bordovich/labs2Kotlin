@@ -29,17 +29,17 @@ fun MyBox(
 ) {
     Box(modifier = modifier.fillMaxSize()) {
         Text(
-            text = stringResource(id = R.string.text_top_start),
+            text = stringResource(id = R.string.text1),
             fontSize = 22.sp,
             modifier = contentModifier.then(Modifier.align(Alignment.TopStart))
         )
         Text(
-            text = stringResource(id = R.string.text_center),
+            text = stringResource(id = R.string.text2),
             fontSize = 22.sp,
             modifier = contentModifier.then(Modifier.align(Alignment.Center))
         )
         Text(
-            text = stringResource(id = R.string.text_bottom_end),
+            text = stringResource(id = R.string.text3),
             fontSize = 22.sp,
             modifier = contentModifier.then(Modifier.align(Alignment.BottomEnd))
         )

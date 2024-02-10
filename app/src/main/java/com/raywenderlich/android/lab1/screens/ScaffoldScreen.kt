@@ -1,4 +1,7 @@
 package com.raywenderlich.android.lab1.screens
+
+import android.annotation.SuppressLint
+import androidx.compose.material.BottomAppBar
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
@@ -21,61 +24,59 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun ScaffoldScreen(){
-
-        MyScaffold()
+fun ScaffoldScreen() {
+    MyScaffold()
 
     BackButtonHandler {
         FundamentalsRouter.navigateTo(Screen.Navigation)
     }
 }
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MyScaffold(){
-    val scaffoldState: ScaffoldState= rememberScaffoldState()
+    val scaffoldState: ScaffoldState = rememberScaffoldState()
     val scope: CoroutineScope = rememberCoroutineScope()
 
-    Scaffold (
+    Scaffold(
         scaffoldState = scaffoldState,
         contentColor = colorResource(id = R.color.colorPrimary),
         content = {
             MyRow()
         },
-        topBar = { MyTopAppBar(scaffoldState = scaffoldState, scope = scope)},
+        topBar = { MyTopAppBar(scaffoldState = scaffoldState, scope = scope) },
         bottomBar = { MyBottomAppBar()},
         drawerContent = { MyColumn()}
     )
-
 }
 
 @Composable
-fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope){
-
-}
-
-@Composable
-fun MyBottomAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope){
+fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
     val drawerState = scaffoldState.drawerState
-
-    TopAppBar (
+    TopAppBar(
         navigationIcon = {
             IconButton(
                 content = {
                     Icon(
                         Icons.Default.Menu,
                         tint = Color.White,
-                        contentDescription = stringResource("меню")
+                        contentDescription = stringResource(id = R.string.menu)
                     )
                 },
                 onClick = {
-                    scope.launch { if (drawerState.isClosed) drawerState.open() else drawerState.close()}
-
+                    scope.launch { if (drawerState.isClosed) drawerState.open() else drawerState.close() }
                 }
             )
-
         },
-        title = { Text(text= stringResource(id = ), color= Color.White)},
+        title = { Text(text = stringResource(id = R.string.app_name), color = Color.White) },
         backgroundColor = colorResource(id = R.color.colorPrimary)
     )
+}
 
+@Composable
+fun MyBottomAppBar(){
+    BottomAppBar(
+        content = {},
+        backgroundColor = colorResource(id = R.color.colorPrimary)
+    )
 }
