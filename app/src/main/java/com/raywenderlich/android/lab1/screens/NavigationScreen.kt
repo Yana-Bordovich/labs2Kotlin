@@ -35,10 +35,13 @@ fun NavigationScreen() {
             NavigationButton(stringResource(id = R.string.button_progress), Screen.ProgressIndicator)
             NavigationButton(stringResource(id = R.string.button_alertDialog), Screen.AlertDialog)
             NavigationButton(stringResource(id = R.string.row), Screen.Row)
-            NavigationButton(stringResource(id = R.string.column),Screen.Column)
-            NavigationButton(stringResource(id = R.string.box),Screen.Box)
-            NavigationButton(stringResource(id = R.string.surface),Screen.Surface)
-            NavigationButton(stringResource(id = R.string.scafold),Screen.Scaffold)
+            NavigationButton(stringResource(id = R.string.column), Screen.Column)
+            NavigationButton(stringResource(id = R.string.box), Screen.Box)
+            NavigationButton(stringResource(id = R.string.surface), Screen.Surface)
+            NavigationButton(stringResource(id = R.string.scaffold), Screen.Scaffold)
+            NavigationButton(stringResource(id = R.string.scrolling), Screen.Scrolling)
+            NavigationButton(stringResource(id = R.string.list), Screen.List)
+            NavigationButton(stringResource(id = R.string.grid), Screen.Grid)
         }
     }
 }
@@ -48,8 +51,8 @@ fun NavigationButton(text: String, screen: Screen) {
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 16.dp),
-        shape = RoundedCornerShape(4.dp),
+            .padding(start = 5.dp, end = 16.dp, top = 5.dp),
+        shape = RoundedCornerShape(2.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
         onClick = { FundamentalsRouter.navigateTo(screen) }
     ) {

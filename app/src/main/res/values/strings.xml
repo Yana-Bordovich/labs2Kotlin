@@ -28,4 +28,20 @@
     <string name="box">коробка</string>
     <string name="surface">сюрфейс</string>
     <string name="scafold">скафолд</string>
+    <string name="shop">"магазин "</string>
+    <string name="pudge">pudge</string>
+    <string name="voidd">void</string>
+    <string name="scaffold">скафолд</string>
+    <string name="scrolling">скролинг</string>
+    <string name="list">списокчек</string>
+    <string name="grid">гриб</string>
+    <string name="learn_kotlin">изучение котлин\n</string>
+    <string name="architecture">архитектура\n</string>
+    <string name="coroutines">"карантин "</string>
+    <string name="sila">сила\n</string>
+    <string name="android">андроид</string>
+    <string name="kotlin">котлин\n</string>
+    <string name="swift">свифт</string>
+    <string name="ios">ios</string>
+    <string name="covers">конверсы</string>
 </resources>
