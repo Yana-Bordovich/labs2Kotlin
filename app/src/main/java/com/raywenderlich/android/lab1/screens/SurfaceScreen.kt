@@ -18,7 +18,6 @@ import com.raywenderlich.android.lab1.router.Screen
 
 @Composable
 fun SurfaceScreen(modifier: Modifier = Modifier) {
-
     Box(modifier = modifier.fillMaxSize()){
         MySurface(modifier = modifier.align(Alignment.Center))
     }

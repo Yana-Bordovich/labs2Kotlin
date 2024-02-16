@@ -27,19 +27,15 @@ fun RowScreen(){
 
 @Composable
 fun MyRow(){
-    Row (
-        verticalAlignment = Alignment.CenterVertically,
+    Row(verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly,
-        modifier = Modifier.fillMaxSize()
-    ){
+        modifier = Modifier.fillMaxSize()){
 
-        THREE_ELEMENT_LIST.forEach { textResId ->
+        THREE_ELEMENT_LIST.forEach{textResId ->
             Text(
                 text = stringResource(id = textResId),
                 fontSize = 18.sp
             )
         }
-
     }
 }
-

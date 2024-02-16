@@ -5,13 +5,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import com.raywenderlich.android.lab1.R
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
-import androidx.compose.ui.Modifier
 
 @Composable
 fun BoxScreen() {
@@ -27,21 +27,23 @@ fun MyBox(
     modifier: Modifier = Modifier,
     contentModifier: Modifier = Modifier
 ) {
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(modifier = modifier.fillMaxSize()){
         Text(
-            text = stringResource(id = R.string.text1),
+            text = stringResource(id = R.string.first),
             fontSize = 22.sp,
-            modifier = contentModifier.then(Modifier.align(Alignment.TopStart))
+            modifier = contentModifier.align(Alignment.TopStart)
         )
+
         Text(
-            text = stringResource(id = R.string.text2),
+            text = stringResource(id = R.string.second),
             fontSize = 22.sp,
-            modifier = contentModifier.then(Modifier.align(Alignment.Center))
+            modifier = contentModifier.align(Alignment.Center)
         )
+
         Text(
-            text = stringResource(id = R.string.text3),
+            text = stringResource(id = R.string.third),
             fontSize = 22.sp,
-            modifier = contentModifier.then(Modifier.align(Alignment.BottomEnd))
+            modifier = contentModifier.align(Alignment.BottomEnd)
         )
     }
 }

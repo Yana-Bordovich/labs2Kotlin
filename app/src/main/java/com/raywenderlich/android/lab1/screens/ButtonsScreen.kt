@@ -45,8 +45,7 @@ fun ExploreButtonsScreen() {
 
 @Composable
 fun MyButton() {
-    Button(
-        onClick = {},
+    Button(onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
         border = BorderStroke(
             1.dp,
@@ -62,22 +61,23 @@ fun MyButton() {
 
 @Composable
 fun MyRadioGroup() {
-    val radioButtons = listOf(0, 1, 2) //1
-    val selectedButton = remember { mutableStateOf(radioButtons.first()) } //2
+    val radioButtons = listOf(0, 1, 2)
+
+    val selectedButton = remember {
+        mutableStateOf(radioButtons.first())
+    }
+
     Column {
-        radioButtons.forEach{ index -> //3
+        radioButtons.forEach{
+                index->
             val isSelected = index == selectedButton.value
-            val colors = RadioButtonDefaults.colors( //4
+            val colors = RadioButtonDefaults.colors(
                 selectedColor = colorResource(id = R.color.purple_500),
                 unselectedColor = colorResource(id = R.color.black),
                 disabledColor = Color.LightGray
             )
 
-            RadioButton( //5
-                colors = colors,
-                selected = isSelected,
-                onClick = { selectedButton.value = index} //6
-            )
+            RadioButton(selected = isSelected, onClick = { selectedButton.value = index }, colors = colors)
         }
     }
 }
@@ -85,12 +85,10 @@ fun MyRadioGroup() {
 @Composable
 fun MyFloatingActionButton() {
     FloatingActionButton(
-        onClick = {},
+        onClick = { /*TODO*/ },
         backgroundColor = colorResource(id = R.color.purple_700),
         contentColor = Color.White,
         content = {
-            Icon(Icons.Filled.Favorite, contentDescription = "Text FAB")
-        }
-
-    )
+            Icon(Icons.Filled.Favorite, contentDescription = "Test FAB")
+        })
 }

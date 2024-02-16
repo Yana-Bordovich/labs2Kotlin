@@ -23,7 +23,7 @@ fun ProgressIndicatorScreen() {
         verticalArrangement = Arrangement.Center
     ) {
         CircularProgressIndicator(
-            color = colorResource(id = androidx.compose.ui.R.color.vector_tint_theme_color),
+            color = colorResource(id = androidx.compose.ui.R.color.vector_tint_color),
             strokeWidth = 5.dp
         )
         LinearProgressIndicator(progress = 0.5f)
